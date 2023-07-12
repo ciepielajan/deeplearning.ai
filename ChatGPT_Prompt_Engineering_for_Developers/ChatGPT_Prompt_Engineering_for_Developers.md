@@ -1,5 +1,7 @@
 # ChatGPT Prompt Engineering for Developers
 
+Course Link: https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/
+
 
 # Guidelines for Prompting
 In this lesson, you'll practice two prompting principles and their related tactics in order to write effective prompts for large language models.

@@ -1,10 +1,9 @@
 [tool.poetry]
-name = "ml-llm-poc"
+name = "llm-tutorials"
 version = "0.1.0"
 description = ""
 authors = ["Jan Ciepiela"]
 readme = "README.md"
-packages = [{include = "ml_llm"}]
 
 [tool.poetry.dependencies]
 python = "^3.8.1"
