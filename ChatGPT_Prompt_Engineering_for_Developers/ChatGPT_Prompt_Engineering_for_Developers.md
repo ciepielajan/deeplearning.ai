@@ -321,8 +321,8 @@ print(response)
 ```
 The student's solution is correct. They correctly identified the costs for land, solar panels, and maintenance, and calculated the total cost for the first year of operations as a function of the number of square feet.
 ```
-#### Note that the student's solution is actually not correct.
-#### We can fix this by instructing the model to work out its own solution first.
+__Note that the student's solution is actually not correct.__
+__We can fix this by instructing the model to work out its own solution first.__
 
 ##### Example with correct predict 
 ```python
