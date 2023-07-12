@@ -6,8 +6,8 @@ Course Link: https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineerin
 # Guidelines for Prompting
 In this lesson, you'll practice two prompting principles and their related tactics in order to write effective prompts for large language models.
 
-## Setup
-#### Load the API key and relevant Python libaries.
+__Setup__
+__Load the API key and relevant Python libaries.__
 
 ```python
 import openai
@@ -39,7 +39,7 @@ def get_completion(prompt, model="gpt-3.5-turbo"):
 - **Principle 1: Write clear and specific instructions**
 - **Principle 2: Give the model time to “think”**
 
-### Tactics
+### Principle 1: Write clear and specific instructions
 
 #### Tactic 1: Use delimiters to clearly indicate distinct parts of the input
 - Delimiters can be anything like: ```, """, < >, `<tag> </tag>`, `:`
