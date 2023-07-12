@@ -324,7 +324,7 @@ The student's solution is correct. They correctly identified the costs for land,
 #### Note that the student's solution is actually not correct.
 #### We can fix this by instructing the model to work out its own solution first.
 
-### Example with correct predict 
+##### Example with correct predict 
 ```python
 prompt = f"""
 Your task is to determine if the student's solution \
