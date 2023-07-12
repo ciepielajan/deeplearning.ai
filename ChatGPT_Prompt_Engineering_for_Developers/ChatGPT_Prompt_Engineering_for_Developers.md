@@ -6,8 +6,7 @@ Course Link: https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineerin
 # Guidelines for Prompting
 In this lesson, you'll practice two prompting principles and their related tactics in order to write effective prompts for large language models.
 
-__Setup__
-__Load the API key and relevant Python libaries.__
+__Setup: Load the API key and relevant Python libaries.__
 
 ```python
 import openai
