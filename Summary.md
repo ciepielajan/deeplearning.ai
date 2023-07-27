@@ -1,20 +1,56 @@
-# SUMMARY - ChatGPT Prompt Engineering for Developers
+# SUMMARY all knowledge:
 
 
+## Zdefiniuj przypadek użycia (_use case_) i utwórz `prompt template` dla instrukcji. 
 
+Zanim opiszemy nasz przypadek użycia, musimy lepiej zrozumieć, czym jest instrukcja.
+
+> Instrukcja to fragment tekstu lub prompt, który jest dostarczany do LLM, takiego jak Llama, GPT-4 lub Claude, aby poprowadzić go do wygenerowania odpowiedzi. Instrukcje pozwalają ludziom kierować rozmową i ograniczać dane wyjściowe modelu językowego, aby były bardziej naturalne, użyteczne i dostosowane do celów użytkownika. Tworzenie jasnych, dobrze sformułowanych instrukcji jest kluczem do produktywnych rozmów.
+
+Przykłady instrukcji są wymienione poniżej w tabeli:
+
+|Zdolność|Przykładowa instrukcja|
+|---|---|
+|Burza mózgów|Zapewnij różnorodny zestaw kreatywnych pomysłów na nowe smaki lodów.|
+|Klasyfikacja|Kategoryzuj te filmy jako komedię, dramat lub horror na podstawie streszczenia fabuły.|
+|Otwarte QA(_QuestionAnswer_)|Dlaczego liście zmieniają kolor jesienią? Wyjaśnij powody naukowe.|
+|Zamknięte QA|Odpowiedz na pytanie "Co jest stolicą Francji?" jednym słowem.|
+|Tworzenie (_Generation_)|Napisz wiersz w stylu Roberta Frosta o naturze i zmieniających się porach roku.|
+|Ekstrakcja informacji|Wyodrębnij imiona głównych bohaterów z tej krótkiej historii.|
+|Podsumowania|Podsumuj ten artykuł na temat ostatnich postępów w energii odnawialnej w 2-3 zdaniach.|
 
 ```python
-def get_completion(prompt, model="gpt-3.5-turbo"):
-    messages = [{"role": "user", "content": prompt}]
-    response = openai.ChatCompletion.create(
-        model=model,
-        messages=messages,
-        temperature=0, # this is the degree of randomness of the model's output
-    )
-    return response.choices[0].message["content"]
+### Instruction:
+Use the Input below to create an instruction, which could have been used to generate the input using an LLM.
+
+### Input:
+Dear [boss name],
+
+I'm writing to request next week, August 1st through August 4th,
+off as paid time off.
+
+I have some personal matters to attend to that week that require
+me to be out of the office. I wanted to give you as much advance
+notice as possible so you can plan accordingly while I am away.
+
+Please let me know if you need any additional information from me
+or have any concerns with me taking next week off. I appreciate you
+considering this request.
+
+Thank you, [Your name]
+
+### Response:
+Write an email to my boss that I need next week 08/01 - 08/04 off.
+
 ```
 
+>IMO:
+Podział na ### Instruction, ### Input i ### Response wydaj się istotny.
+Podczas trenowania llama`y użyto własnie takich promptów.
+
+
 ## Prompting Principles
+
 - **Principle 1: Pisz jasne i konkretne instrukcje**
 - **Principle 2: Daj modelowi czas na „pomyślenie”**
 
@@ -192,4 +228,15 @@ Całkowity koszt: 100x + 250x + 100000 + 10x = 360x + 100000
 ``
 Własne rozwiazanie:
 """
+```
+
+```python
+def get_completion(prompt, model="gpt-3.5-turbo"):
+    messages = [{"role": "user", "content": prompt}]
+    response = openai.ChatCompletion.create(
+        model=model,
+        messages=messages,
+        temperature=0, # this is the degree of randomness of the model's output
+    )
+    return response.choices[0].message["content"]
 ```
